@@ -6,11 +6,11 @@ module MessageStore
       end
 
       def self.type
-        'SomeType'
+        "SomeType"
       end
 
       def self.other_type
-        'SomeOtherType'
+        "SomeOtherType"
       end
 
       def self.data

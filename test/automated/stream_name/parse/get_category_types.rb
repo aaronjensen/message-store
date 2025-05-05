@@ -1,4 +1,4 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Stream Name" do
   context "Get Types" do
@@ -8,7 +8,7 @@ context "Stream Name" do
 
         types = StreamName.get_types(stream_name)
 
-        assert(types == ['someType', 'someOtherType'])
+        assert(types == ["someType", "someOtherType"])
       end
     end
 
@@ -18,7 +18,7 @@ context "Stream Name" do
 
         types = StreamName.get_types(stream_name)
 
-        assert(types == ['someType', 'someOtherType'])
+        assert(types == ["someType", "someOtherType"])
       end
     end
 
@@ -28,12 +28,12 @@ context "Stream Name" do
 
         types = StreamName.get_types(stream_name)
 
-        assert(types == ['someType'])
+        assert(types == ["someType"])
       end
     end
 
     context "No type list in the stream name" do
-      types = StreamName.get_types('someStream')
+      types = StreamName.get_types("someStream")
 
       test "No types" do
         assert(types.empty?)

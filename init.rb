@@ -1,3 +1,3 @@
-require_relative 'load_path'
+require_relative "load_path"
 
-require 'message_store'
+require "message_store"

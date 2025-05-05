@@ -4,7 +4,7 @@ module MessageStore
       module Hash
         def self.data
           {
-            some_attribute: 'some value'
+            some_attribute: "some value"
           }
         end
 

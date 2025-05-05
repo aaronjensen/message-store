@@ -18,7 +18,7 @@ module MessageStore
         types.unshift(type) unless type.nil?
 
         type_list = nil
-        type_list = types.join('+') unless types.empty?
+        type_list = types.join("+") unless types.empty?
 
         stream_name = category
         stream_name = "#{stream_name}:#{type_list}" unless type_list.nil?

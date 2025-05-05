@@ -1,4 +1,4 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Stream Name" do
   context "Get Type List" do
@@ -8,7 +8,7 @@ context "Stream Name" do
       type_list = StreamName.get_type(stream_name)
 
       test "Types are the list of elements following a colon separator" do
-        assert(type_list == 'someType+someOtherType')
+        assert(type_list == "someType+someOtherType")
       end
     end
 
@@ -18,7 +18,7 @@ context "Stream Name" do
       type_list = StreamName.get_type(stream_name)
 
       test "Types are the list of elements following a colon separator and preceding the ID" do
-        assert(type_list == 'someType+someOtherType')
+        assert(type_list == "someType+someOtherType")
       end
     end
 
@@ -28,7 +28,7 @@ context "Stream Name" do
       type_list = StreamName.get_type(stream_name)
 
       test "Types are the list of elements following a colon separator and preceding the ID" do
-        assert(type_list == 'someType')
+        assert(type_list == "someType")
       end
     end
 

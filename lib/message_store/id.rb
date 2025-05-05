@@ -3,7 +3,7 @@ module MessageStore
     Error = Class.new(RuntimeError)
 
     def self.compound_id_separator
-      '+'
+      "+"
     end
 
     def self.id(id)

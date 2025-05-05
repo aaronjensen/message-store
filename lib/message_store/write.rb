@@ -45,7 +45,7 @@ module MessageStore
       batch = Array(message_data)
 
       logger.trace(tag: :write) do
-        message_types = batch.map {|message_data| message_data.type }.uniq.join(', ')
+        message_types = batch.map {|message_data| message_data.type }.uniq.join(", ")
         "Writing message data (Types: #{message_types}, Stream Name: #{stream_name}, Expected Version: #{expected_version.inspect}, Number of Messages: #{batch.length})"
       end
       logger.trace(tags: [:data, :message_data]) { batch.pretty_inspect }
@@ -55,7 +55,7 @@ module MessageStore
       position = write(batch, stream_name, expected_version: expected_version)
 
       logger.info(tag: :write) do
-        message_types = batch.map {|message_data| message_data.type }.uniq.join(', ')
+        message_types = batch.map {|message_data| message_data.type }.uniq.join(", ")
         "Wrote message data (Types: #{message_types}, Stream Name: #{stream_name}, Expected Version: #{expected_version.inspect}, Number of Messages: #{batch.length})"
       end
       logger.info(tags: [:data, :message_data]) { batch.pretty_inspect }

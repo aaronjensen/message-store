@@ -3,7 +3,7 @@ module MessageStore
     Error = Class.new(RuntimeError)
 
     def self.id_separator
-      '-'
+      "-"
     end
 
     def self.compound_id_separator
@@ -11,11 +11,11 @@ module MessageStore
     end
 
     def self.category_type_separator
-      ':'
+      ":"
     end
 
     def self.compound_type_separator
-      '+'
+      "+"
     end
 
     def self.stream_name(category, stream_id=nil, cardinal_id: nil, id: nil, ids: nil, type: nil, types: nil)

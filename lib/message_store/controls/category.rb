@@ -10,7 +10,7 @@ module MessageStore
 
         randomize_category = true if randomize_category.nil?
 
-        category ||= 'test'
+        category ||= "test"
 
         if randomize_category
           category = "#{category}#{SecureRandom.hex(16)}XX"

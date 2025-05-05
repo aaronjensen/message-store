@@ -1,8 +1,8 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Stream Name" do
   context "Get Entity Name" do
-    category = 'someStream'
+    category = "someStream"
 
     context "Stream Name Contains an ID" do
       id = Identifier::UUID.random
